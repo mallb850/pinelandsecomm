@@ -1,0 +1,252 @@
+//Add your custom bootstrap variables here, see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss for full list of variables.
+$navbar-default-bg: #312312;
+$light-orange: #ff8c00;
+$black: #ffffff;
+$navbar-default-color: $light-orange;
+
+
+@import "bootstrap-sprockets";
+@import "variables";
+@import "bootstrap";
+
+// -- Spree Custom Header and Footer ---------------------
+#spree-header {
+  background: $brand-primary asset-url('spree_header.jpg') center center;
+  background-size: cover;
+  margin-bottom: $line-height-computed;
+
+  #header {
+    background: rgba($gray-darker, 0.4);
+    padding: $line-height-computed 0;
+  }
+
+  #logo {
+    margin-bottom: 10px;
+    
+
+    img {
+      width: 18%;
+      height: 18%;
+      
+    }
+  }
+
+  .nav a {
+    color: white;
+
+    &:hover, &:focus {
+      background: rgba($gray-darker, 0.4);
+    }
+  }
+
+  .navbar {
+    border: 0;
+    margin-bottom: 0;
+  }
+}
+
+#spree-footer {
+  background: $gray-dark;
+  padding-top: $padding-base-horizontal;
+  margin-top: $line-height-computed;
+  color: white;
+}
+
+// -- Spree Layout Custom Rules -------------------------
+
+.alert-notice { @extend .alert-success; }
+.alert-error, .alert-registration_error { @extend .alert-danger; }
+.alert-alert { @extend .alert-info; }
+
+.product-body {
+  height: 170px;
+}
+
+.progress-steps {
+  margin-top: $line-height-computed;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+// Center cart line items
+table {
+  &.table > tbody > tr {
+    &.line-item td, &.stock-item td {
+      vertical-align: middle;
+    }
+  }
+
+  &#line-items {
+    > tbody, > tfoot {
+      > tr > td {
+        vertical-align: middle;
+
+        &.order-qty {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+// Footer links
+#footer-left a {
+  color: lighten($brand-primary, 20);
+
+  &:hover {
+    color: lighten($brand-primary, 10);
+  }
+}
+
+// Updated credit-card image
+#credit-card-image {
+  margin-top: -10px;
+}
+
+.existing-credit-card-list td {
+  padding: 5px;
+}
+
+// Navbar CSS
+
+.transition-timer-carousel .carousel-caption {
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 4%, rgba(0,0,0,0.5) 32%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(4%,rgba(0,0,0,0.1)), color-stop(32%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+	width: 100%;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	text-align: left;
+	padding-top: 5px;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+.transition-timer-carousel .carousel-caption .carousel-caption-header {
+	margin-top: 10px;
+	font-size: 24px;
+}
+
+@media (min-width: 970px) {
+    /* Lower the font size of the carousel caption header so that our caption
+    doesn't take up the full image/slide on smaller screens */
+	.transition-timer-carousel .carousel-caption .carousel-caption-header {
+		font-size: 36px;
+	}
+}
+.transition-timer-carousel .carousel-indicators {
+	bottom: 0px;
+	margin-bottom: 5px;
+}
+.transition-timer-carousel .carousel-control {
+	z-index: 11;
+}
+.transition-timer-carousel .transition-timer-carousel-progress-bar {
+    height: 5px;
+    background-color: #5cb85c;
+    width: 0%;
+    margin: -5px 0px 0px 0px;
+    border: none;
+    z-index: 11;
+    position: relative;
+}
+.transition-timer-carousel .transition-timer-carousel-progress-bar.animate{
+    /* We make the transition time shorter to avoid the slide transitioning
+    before the timer bar is "full" - change the 4.25s here to fit your
+    carousel's transition time */
+    -webkit-transition: width 4.25s linear;
+	-moz-transition: width 4.25s linear;
+	-o-transition: width 4.25s linear;
+	transition: width 4.25s linear;
+}
+
+
+// background and body elements
+
+
+h1, h2, h3, h4, h5, h6 {
+  
+  color: #000000;
+  
+}
+.product-section-title{
+  text-align: left;
+  color: black;
+}
+.selling {
+  
+  color: #000000;
+  
+}
+
+td {
+  
+  color: #0D3607;
+  background-color: #ffffff;
+  
+}
+
+.line-item-description {
+  
+  color: #000000;
+  
+}
+
+.cart-adjustment-header {
+  
+  color: #000000;
+  
+}
+
+
+.list-group-item {
+  
+  font-size: 18px;
+  color: #000000;
+  
+}
+
+span[itemprop="price"] {
+   color: #000000;
+}
+
+.centerali {
+  text-align: center;
+}
+
+.ratings-stars {
+  text-align: left;
+}
+
+span[itemprop="name"] {
+   font-size: 17px;
+   font-weight: 600;
+}
+
+.panel-footer {
+  
+  background: #C6D458;
+  
+}
+
+.taxonomy-root {
+  
+  font-weight: 700;
+  font-size: 20px;
+  
+}
+
+.well {
+  
+}
+
+.panel-default > .panel-heading {
+  background: #C6D458;
+}
+
